@@ -59,14 +59,31 @@ html, body{
   border-radius: 0;
 }
 
+
+
+
+
+
+
+
+
 .padding{
   padding-bottom: 2rem;
+}
+
+.padding-top{
+  padding-top: 2.5rem;
+}
+
+.coloring{
+  background-color: rgb(51,57,63);
 }
 
 .welcome{
   width: 75%;
   margin:0 auto;
   padding-bottom: 2rem;
+  color: rgb(224,224,224);
 }
 
 .welcome hr{
@@ -74,6 +91,25 @@ html, body{
   width:95%;
   margin-top: .3rem;
   margin-bottom: 1rem;
+}
+
+
+.about{
+  background-color: rgb(224,224,224);
+  color:rgb(60,60,60);
+}
+
+.about h2{
+  color:rgb(60,60,60);
+}
+
+
+.circleImg{
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: right;
 }
 
 .fa-code{
@@ -159,6 +195,21 @@ hr.light-100{
   margin-bottom: 1rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*---Media Queries --*/
 @media (max-width: 992px) {
   .social a{
@@ -189,11 +240,18 @@ hr.light-100{
   font-size:200%;
 }
 
+.display-3{
+  font-size: 300%;
+}
+
 .social a{
   font-size: 2.5em;
   padding: 1.2rem;
 }
 }
+
+
+
 @media (max-width: 576px) {
   .carousel-caption{
   top:40%;
