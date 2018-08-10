@@ -198,13 +198,6 @@ hr.light-100{
     font-size: 80%;
   }
 
-  .projText {
-        display: table;
-
-        padding-top: 40px;
-    }
-  }
-
 
 @media (max-width: 880px) {
 .display-3{
@@ -215,7 +208,6 @@ hr.light-100{
 
 
 @media (max-width: 768px) {
-
 
 
 .display-4{
@@ -237,6 +229,10 @@ hr.light-100{
     margin-left: auto;
     margin-right: auto;
     height: 320px;
+}
+
+.card-text{
+  font-size:80%;
 }
 
 }
@@ -264,6 +260,7 @@ hr.light-100{
   font-size: 4em;
   padding: 2rem;
 }
+
 
 }
 
