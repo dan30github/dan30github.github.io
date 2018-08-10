@@ -23,16 +23,16 @@
 	<div class="collapse navbar-collapse" id="navbarResponsive">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item active">
-				<a class="nav-link" href="index.html">Home</a>
+				<a class="nav-link py-0" href="index.html">Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">About</a>
+				<a class="nav-link py-0" href="#about">About</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="projects.html">Projects</a>
+				<a class="nav-link py-0" href="projects.html">Projects</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Contact</a>
+				<a class="nav-link py-0" href="#contact">Contact</a>
 			</li>
 		</ul>
 	</div>
@@ -57,13 +57,13 @@
 
 
 <!--- ABOUT -->
-<div class="container-fluid padding padding-top about light-color dark-font">
+<div class="container-fluid padding padding-top about light-color dark-font" id="about">
 
 	<!--- About -->
 	<div class="container-fluid padding">
 		<div class="row welcome text-center">
 			<div class="col-12">
-				<h2 class="display-4">About</h2>
+				<h2 class="display-4 pt-2">About</h2>
 			</div>
 			<hr>
 		</div>
@@ -75,7 +75,7 @@
 			<img src="img/photo2.jpg" class="img-fluid circleImg">
 		</div>
 		<div class="col-md-8 col-lg-6">
-			<p class="padding-top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nibh diam, gravida non nulla vitae, vulputate aliquet eros. Etiam porttitor tellus lorem, ut aliquet metus scelerisque vel. Aenean at semper nisi, eu bibendum massa. Phasellus feugiat nunc aliquam, fringilla tortor non, lacinia elit. Donec pretium dolor ipsum, facilisis congue risus imperdiet ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris gravida mollis tortor commodo mattis. a tortor non, lacinia elit. Donec pretium dolor ipsum, facilisis congue risus imperdiet ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris gravida mollis tortor commodo mattis.</p>
+			<p class="padding-top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nibh diam, gravida non nulla vitae, vulputate aliquet eros. Etiam porttitor tellus lorem, ut aliquet metus scelerisque vel. Aenean at semper nisi, eu bibendum massa. Phasellus feugiat nunc aliquam, fringilla tortor non, lacinia elit. </p>
 			<br>
 		</div>
 	</div>
@@ -87,7 +87,7 @@
 
   
 <!--- PROJECTS-->
-<div class="container-fluid padding padding-top dark-color light-font">
+<div class="container-fluid padding padding-top dark-color light-font id="projects">
 	<div class="row welcome text-center">
 		<div class="col-12">
 			<h2 class="display-4">Projects</h2>
@@ -111,10 +111,10 @@
 
 		<div class="col-md-4">
 			<div class="card border-light text-white bg-dark mb-3">
-				<img class="card-img-top" src="img/robot2.jpg">
+				<img class="card-img-top" src="img/chicken.gif">
 				<div class="card-body">
 					<h4 class="card-title">PROJETO2</h4>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sapien massa, pulvinar eu metus in, efficitur malesuada leo. Morbi euismod quam sed risus viverra, in commodo tellus vulputate. Nulla sed purus nec nunc scelerisque tincidunt. </p>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sapien massa, pulvinar eu metus in, efficitur malesuada leo. Morbi euismod quam sed risus viverra, in commodo tellus vulputate. Nulla sed purus nec nunc scelerisque tincidunt.</p>
 				</div>
 			</div>
 		</div>
@@ -136,7 +136,7 @@
 
 
 <!--- Connect -->
-<div class="container-fluid padding padding-top light-color">
+<div class="container-fluid padding padding-top light-color" id="contact">
 	<div class="row text-center padding">
 		<div class="col-12">
 			<h2 class="display-4">Contact</h2>
@@ -161,6 +161,37 @@
 		<p class="lead">dmc6264@psu.edu</p>
 	</div>
 </div>
+
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#navbarResponsive a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
 
 
 </body>

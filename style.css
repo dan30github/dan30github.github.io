@@ -149,37 +149,73 @@ hr.light-100{
   margin-bottom: 1rem;
 }
 
-.oi{
+.border-style{
   border:5px solid #cecece;
   border-radius: 20px;
-  width:80%;
+  width:95%;
   padding: 15px;
 }
+
+
+
+.thumbnail{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: right;
+    border: 5px solid rgb(91,91,91);
+
+}
+
+.projImg {
+    width: 100%;
+    vertical-align: middle;
+    border: 1px solid #101010;
+}
+
+.pad{
+  padding: 3rem;
+  vertical-align: middle;
+}
+
 .helper {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
 }
 
-.thumbnail{
-  width: 100%;
-  vertical-align: middle;
-}
 
 
 /*---Media Queries --*/
+
 @media (max-width: 992px) {
   .social a{
     font-size: 4em;
     padding: 2rem;
   }
 
+    .p-thumbnail{
+    font-size: 80%;
+  }
 
+  .projText {
+        display: table;
 
+        padding-top: 40px;
+    }
   }
 
 
+@media (max-width: 880px) {
+.display-3{
+  font-size: 300%;
+}
+
+}
+
+
 @media (max-width: 768px) {
+
 
 
 .display-4{
@@ -191,13 +227,27 @@ hr.light-100{
 }
 
 .social a{
-  font-size: 2.5em;
-  padding: 1.2rem;
+  font-size: 5em;
+  padding:2rem;
+}
+
+.circleImg{
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 320px;
+}
+
 }
 
 
-}
+@media (max-width: 610px) {
 
+.display-3{
+  font-size:260%;
+}
+}
 
 
 @media (max-width: 576px) {
@@ -206,9 +256,13 @@ hr.light-100{
   font-size:160%;
 }
 
+.display-3{
+  font-size:260%;
+}
+
 .social a{
-  font-size: 2em;
-  padding: .7rem;
+  font-size: 4em;
+  padding: 2rem;
 }
 
 }
